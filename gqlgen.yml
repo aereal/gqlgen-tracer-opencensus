@@ -1,0 +1,26 @@
+schema:
+  - testdata/schema.gql
+exec:
+  filename: testdata/generated/generated.go
+  package: generated
+model:
+  filename: testdata/model/models_gen.go
+  package: model
+resolver:
+  layout: follow-schema
+  dir: testdata
+  package: testdata
+autobind:
+  - "github.com/aereal/gqlgen-tracer-opencensus/testdata/model"
+models:
+  ID:
+    model:
+      - github.com/99designs/gqlgen/graphql.ID
+      - github.com/99designs/gqlgen/graphql.Int
+      - github.com/99designs/gqlgen/graphql.Int64
+      - github.com/99designs/gqlgen/graphql.Int32
+  Int:
+    model:
+      - github.com/99designs/gqlgen/graphql.Int
+      - github.com/99designs/gqlgen/graphql.Int64
+      - github.com/99designs/gqlgen/graphql.Int32

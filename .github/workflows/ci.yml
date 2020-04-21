@@ -16,9 +16,7 @@ jobs:
           - '1.13.x'
           - '1.14.x'
         os:
-          - windows-latest
           - ubuntu-latest
-          - macOS-latest
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
